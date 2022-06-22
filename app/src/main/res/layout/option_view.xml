@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dataModel"
+            type="com.example.showlist.datamodel.DataModel" />
+    </data>
+
+
+    <LinearLayout
+        style="@style/LayoutStyle"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/photTitle"
+            android:text="@{dataModel.title}"
+            tools:text="photo 1"
+            android:textSize="18dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            style="@style/LayoutStyle"/>
+
+        <RadioGroup style="@style/WrapLayout"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                style="@style/RadioButtonStyle"
+                android:text="Radio Button 1" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                style="@style/RadioButtonStyle"
+                android:text="Radio Button 2" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                style="@style/RadioButtonStyle"
+                android:text="Radio Button 3" />
+        </RadioGroup>
+
+    </LinearLayout>
+</layout>

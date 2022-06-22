@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParent"
+    android:orientation="vertical"
+    android:layout_marginLeft="16dp"
+    android:background="@color/white"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        style="@style/ToolBarStyle">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_arrow_iv"
+            style="@style/MatchContent"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/ToolbarHeaderText"
+            android:text="Display Items"
+            />
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/dividerView"/>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerView"
+        style="@style/MatchParent"/>
+</LinearLayout>

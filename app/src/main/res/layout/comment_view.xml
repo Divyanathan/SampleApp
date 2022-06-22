@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dataModel"
+            type="com.example.showlist.datamodel.DataModel" />
+    </data>
+
+    <LinearLayout
+        style="@style/WrapLayout"
+        android:background="@drawable/layout_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/photTitle"
+            style="@style/WrapContent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="15dp"
+            android:text="@{dataModel.title}"
+            android:textSize="18dp"
+            tools:text="photo 1" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/toggle_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="20dp"
+            android:theme="@style/switchcompact_theme"
+            style="@style/WrapContent"
+            android:text="Provide Comment "
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/comment_text"
+            style="@style/EditTextstyle"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_bg"
+            android:hint="Type Comment"
+            android:maxLines="10"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:textColorHint="@color/black"
+            android:minHeight="150dp"
+            android:textSize="15dp" />
+    </LinearLayout>
+</layout>
